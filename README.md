@@ -31,7 +31,6 @@ Computer Vision
 + Pre-trained & Fine tuning
 + 3 Strategies for Fine tuning
 + Feature Extraction from Pretrained model
-+ Lower layers of the model extract 'local' and very 'general' feature maps(edges, colors, textures, etc.). On the other hand, the Higher layer (dog's eyes or cat's ears) to extract more abstract feature.
-+ [Transfer Learning에 대한 블로그 포스팅](https://westchaevi.tistory.com/3)
++ Lower layers of the model extract 'local' and very 'general' feature maps(edges, colors, textures, etc.). On the other hand, the Higher layer (dog's eyes or cat's ears) to extract more abstract feature.  [Transfer Learning에 대한 블로그 포스팅](https://westchaevi.tistory.com/3)
 
 #### 과제2. Manage Image Directory
