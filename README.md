@@ -34,3 +34,35 @@ Computer Vision
 + Lower layers of the model extract 'local' and very 'general' feature maps(edges, colors, textures, etc.). On the other hand, the Higher layer (dog's eyes or cat's ears) to extract more abstract feature.  [Transfer Learning에 대한 블로그 포스팅](https://westchaevi.tistory.com/3)
 
 #### 과제2. Manage Image Directory
+[과제2를 수행한 코드](https://github.com/WestChaeVI/Date-Network-Analysis/blob/main/CV_seminar_project_week_2_%EA%B3%BC%EC%A0%9C.ipynb)
+
+It took 1312 pictures of dolphins, sharks, and whales, created a class according to the name of the fish, and created a function to put the image in the corresponding class in a 7(train) : 2(valid) : 1(test) ratio.
+
+> 과제2 Review
+> 1. It was an opportunity to experience firsthand how important it is to make code efficiently and simply.
+> 2. Reduce the length of code by using dictionaries.
+> 3. This assignment was able to optimize the function through enough internet search, but I wrote code to learn about handling Class and self methods.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Week 3 - ImageNet Challenge 2014
++ Reading and Reviewing 'the VggNet' paper
++ Reading and Reviewing 'the GoogLeNet' paper
+
+
+#### 과제3 - (1) Visualizing different images for each class for each column.
+#### 과제3 - (2) Visualizing by changing image pixel values
+
+[과제3을 수행한 코드](https://github.com/WestChaeVI/Date-Network-Analysis/blob/main/CV_seminar_project_week_3_%EA%B3%BC%EC%A0%9C.ipynb)
+![0204013449759406](https://user-images.githubusercontent.com/104747868/216657163-7755fa5f-ae37-40dc-90bd-db3e43c9bd30.jpg)
+
+> (1) Visualize different images for each row of images of dolphins, sharks, and whales (Condition: Use only one 'for statement')
+
+> (2) Load any dolphin image and change the pixels of the image to add color.
+
+
+> 과제3 Review
+> 1. I was able to study how to import an image and visualize it in the desired rows and columns.
+> 2. Using dictionaries and enumerate functions can effectively shorten the length of your code.
+> 3. The plt.tight_layout() function was used to prevent the images from overlapping.
+> 4. I was able to study how to handle pixel values of images. ~~I wanted to use the cv2.line() function intensely..~~
