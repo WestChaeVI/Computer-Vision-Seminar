@@ -48,8 +48,15 @@ It took 1312 pictures of dolphins, sharks, and whales, created a class according
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Week 3 - ImageNet Challenge 2014
-+ Reading and Reviewing 'the VggNet' paper
-+ Reading and Reviewing 'the GoogLeNet' paper
++ Making py module
++ How to visualize images using libraries (cv2_imshow, plt.imshow, PIL.open)
+> Since plt.imshow reads the image backwards as BRG rather than RGB when it is input, there is one thing that needs to be changed.
+> plt.imshow(img[:,:,::-1])
++ Reading and Reviewing [VggNet](https://arxiv.org/pdf/1409.1556.pdf) paper
+> 1. Create the most efficient model -> Layer deep + no loss of gradient
+> 2. It was stacked deep using a 3x3 filter.
+> 3. The 1x1 filter made sense
++ Reading and Reviewing [GoogLeNet](https://arxiv.org/pdf/1409.4842.pdf) paper
 
 
 #### 과제3 - (1) Visualizing different images for each class for each column.
