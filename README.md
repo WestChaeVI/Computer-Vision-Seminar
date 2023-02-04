@@ -35,6 +35,8 @@ Computer Vision
 
 #### 과제2. Manage Image Directory
 [과제2를 수행한 코드](https://github.com/WestChaeVI/Date-Network-Analysis/blob/main/CV_seminar_project_week_2_%EA%B3%BC%EC%A0%9C.ipynb)
+![0204232130857502](https://user-images.githubusercontent.com/104747868/216772710-37c7c120-ecfb-4059-8ad4-7cf115eb9027.jpg)
+
 
 It took 1312 pictures of dolphins, sharks, and whales, created a class according to the name of the fish, and created a function to put the image in the corresponding class in a 7(train) : 2(valid) : 1(test) ratio.
 
