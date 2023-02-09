@@ -2,7 +2,7 @@
 Computer Vision
 
 > 2022.01.19 ~ ing
-> I am active as a member of the club of the undergraduate major of the Department of Data Science at the University of Suwon.   
+> I am active as a member of the club of the undergraduate major of the Department of Data Science at the Suwon University.   
    
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Week 1 - Neural Network
@@ -50,7 +50,7 @@ It took 1312 pictures of dolphins, sharks, and whales, created a class according
 ## Week 3 - ImageNet Challenge 2014
 + Making py module
 + How to visualize images using libraries (cv2_imshow, plt.imshow, PIL.open)
-> Since plt.imshow reads the image backwards as BRG rather than RGB when it is input, there is one thing that needs to be changed.
+> Since plt.imshow reads the image backwards as BGR rather than RGB when it is input, there is one thing that needs to be changed.
 > plt.imshow(img[:,:,::-1])
 + Reading and Reviewing [VggNet](https://arxiv.org/pdf/1409.1556.pdf) paper
 > 1. Create the most efficient model -> Layer deep + no loss of gradient
