@@ -56,7 +56,6 @@ It took 1312 pictures of dolphins, sharks, and whales, created a class according
 > 1. Create the most efficient model -> Layer deep + no loss of gradient
 > 2. It was stacked deep using a 3x3 filter.
 > 3. The 1x1 filter made sense
-+ Reading and Reviewing [GoogLeNet](https://arxiv.org/pdf/1409.4842.pdf) paper
 
 
 #### 과제3 - (1) Visualizing different images for each class for each column.
