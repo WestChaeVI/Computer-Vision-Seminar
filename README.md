@@ -77,10 +77,22 @@ It took 1312 pictures of dolphins, sharks, and whales, created a class according
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## Week 4 - Pytorch
+## Week 4 - Augmentation in Pytorch
 + Learn how Pytorch works.
 + Create a Pytorch dataset class.
 + Image augmentation
+> 1. A.Resize(224,224)
+> 2. A.Transpose(p=0.5)
+> 3. A.HorizontalFlip(p=0.5)
+> 4. A.VerticalFlip(p=0.5)
+> 5. A.ShiftScaleRotate(p=0.5)
+> 6. A.HueSaturationValue(hue_shift_limit=20, sat_shift_limit=20, val_shift_limit=20, p=0.5)
+> 7. A.RandomBrightnessContrast(brightness_limit=(-0.1,0.1), contrast_limit=(-0.1, 0.1), p=0.5)
+> 8. A.ChannelShuffle()
+> 9. A.Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225), max_pixel_value=255.0, always_apply=False, p=1.0)
+> 10. A.CoarseDropout(p=0.5)
+> 11. ToTensorV2()
+
 
 [Customizing Pytorch Dataset Class](https://github.com/WestChaeVI/Data-Network-Analysis/blob/main/week4_Pytorch_Dataset_Class_%EC%BB%A4%EC%8A%A4%ED%85%80.ipynb)
 
