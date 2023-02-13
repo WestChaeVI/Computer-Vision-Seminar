@@ -79,7 +79,13 @@ It took 1312 pictures of dolphins, sharks, and whales, created a class according
 
 ## Week 4 - Augmentation in Pytorch
 + Learn how Pytorch works.
-+ Create a Pytorch dataset class.
+> 1. Preparing DataSet
+> 2. Creating DataClass
+> 3. Creating Model
+> 4. Learning
+
++ Create a Pytorch dataset class in Colab
+
 + Image augmentation
 > 1. A.Resize(224,224)
 > 2. A.Transpose(p=0.5)
