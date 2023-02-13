@@ -108,6 +108,7 @@ It took 1312 pictures of dolphins, sharks, and whales, created a class according
 
 
 > 과제4 Review
+
 > To visualize an image, we need to create the inverse function of Augmentations.
 > 1. Change the channel axis using the permute module. **(3, 224, 224) -> (224, 224, 3)**
 > 2. Convert from tensor to numpy
