@@ -74,3 +74,23 @@ It took 1312 pictures of dolphins, sharks, and whales, created a class according
 > 2. Using dictionaries and enumerate functions can effectively shorten the length of your code.
 > 3. The plt.tight_layout() function was used to prevent the images from overlapping.
 > 4. I was able to study how to handle pixel values of images. ~~I wanted to use the cv2.line() function intensely..~~
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Week 4 - Pytorch
++ Learn how Pytorch works.
++ Create a Pytorch dataset class.
++ Image augmentation
+
+[Customizing Pytorch Dataset Class](https://github.com/WestChaeVI/Data-Network-Analysis/blob/main/week4_Pytorch_Dataset_Class_%EC%BB%A4%EC%8A%A4%ED%85%80.ipynb)
+
+#### 과제4. Visualizing the original image and the augmented image
+[과제4를 수행한 코드](https://github.com/WestChaeVI/Data-Network-Analysis/blob/main/CV_seminar_week4_%EA%B3%BC%EC%A0%9C.ipynb)
+![218383559-5690ebf5-28a9-43ac-af64-c17748536e9f](https://user-images.githubusercontent.com/104747868/218384138-017b75bb-8d92-414b-9688-e438b2872b6c.png)
+
+
+> 과제4 Review
+> To visualize an image, we need to create the inverse function of Augmentations.
+> 1. Change the channel axis using the permute module. **(3, 224, 224) -> (224, 224, 3)**
+> 2. Convert from tensor to numpy
+> 3. renormalizing, and astype(int)
