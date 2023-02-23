@@ -14,7 +14,10 @@ Computer Vision
 + Gradient Loss & Overfitting
 
 #### 과제1. Modifying the Image Classification Model In Kaggle
- [과제1을 수행한 Kaggle Link](https://www.kaggle.com/code/westchaevi/beg-tut-intel-image-classification-93-76-accur/edit)   
+ [과제1을 수행한 Kaggle Link](https://www.kaggle.com/code/westchaevi/beg-tut-intel-image-classification-93-76-accur/edit)  
+ 
+ ![0223221548355065](https://user-images.githubusercontent.com/104747868/220949644-4c0ff120-7be5-4b5d-bde0-93217d215e4b.jpg)
+ 
  Seeking ways to improve gradient loss and overfitting problems by referring to existing Intel ImageNet Challenge codes in Kaggle
 
 > 과제1 Review
@@ -113,3 +116,49 @@ It took 1312 pictures of dolphins, sharks, and whales, created a class according
 > 1. Change the channel axis using the permute module. **(3, 224, 224) -> (224, 224, 3)**
 > 2. Convert from tensor to numpy
 > 3. renormalizing, and astype(int)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Week 5 - GoogLeNet & ResNet
+
+### [GoogLeNet](https://arxiv.org/pdf/1409.4842.pdf) = 1x1 Conv + Concatenate + Auxiliary classifier
+![0223233526203321](https://user-images.githubusercontent.com/104747868/220949449-67914dd9-7241-44e8-8c2e-f0347b492021.jpg)
+
+##### Focusing on Depth and **Width**
+> Using filters of various sizes.
+##### Considering Computational Complexity 
+> It makes it possible to use 1x1 filter efficiently.
+> It was able to layer deeper.
+##### Merits of '1x1 Conv'
+> 1. It can handle the channel axis.
+> 2. It can give nonlinearity.
+##### Naïve Version vs **Dimension Reduction Version**(adopted)
+> 1. Naïve Version = previous layer + **5x5 conv** + filter concatenation
+> 2. Dimension Reduction Version = previous layer + **1x1 conv + 5x5 conv** + filter concatenation
+
+
+### [ResNet](https://arxiv.org/pdf/1512.03385.pdf) = Plain net + Identity Mapping
+![0224001643651415](https://user-images.githubusercontent.com/104747868/220948683-fbc046eb-9967-4536-8a71-23199dcf1cad.jpg)
+
+##### "If it stack 1000 layers without Overfitting and Gradient Vanishing, it'll get 100% accuracy, right?
+---> "Is learning better network as easy as stacking more layer?"
+
+---> ResNet turned the focus differently from the previous State of the Art(Sota) models.
+
+##### The layers were stacked deeper, but the performance was not better than the shallow ones.
+---> It is not problem of Overfitting, Gradient Vanishing
+
+---> Degradation Problem (of training accuracy)
+
+##### Identity Mapping
+> 1. H(x) = f(x) + x  (x is Input, f(x) is Conv)
+> 2. Definition of ploblem : H(x) - x = 0 
+> 3. Let's adjust the optimization well to zero the residuals.
+
+##### propagation & back propagation
+> Due to the nature of the conv layer, as the layer deepens, the image is viewed more globally and the high-level feature is learned.
+
+> Now, using reserved block, each layer learns H(x) from the value received from identity mapping, so learning/convergence is easier because their mission is clearer.
+
+> Since shortcut is simply a plus node, the complexity does not increase, and the gradient can be propagated even in backpropagation, solving the Gradient Vanishing problem.
+
