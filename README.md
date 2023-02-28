@@ -2,6 +2,7 @@
 Computer Vision
 
 > 2022.01.19 ~ ing
+
 > I am active as a member of the club of the undergraduate major of the Department of Data Science at the Suwon University.   
    
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
