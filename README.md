@@ -163,3 +163,33 @@ It took 1312 pictures of dolphins, sharks, and whales, created a class according
 
 > Since shortcut is simply a plus node, the complexity does not increase, and the gradient can be propagated even in backpropagation, solving the Gradient Vanishing problem.
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Week 6 - ResNet50 Image Classification (val_acc : **90.87%**)
+
+[Pytorch Code](https://github.com/WestChaeVI/Data-Network-Analysis/blob/main/Task/CV_seminar_project_week_6_%EA%B3%BC%EC%A0%9C.ipynb)
+
++ The code was written in pytorch.
+> 1. Preparing DataSet(train,valid)
+> 
+> 2. Model is the ResNet50(pretrained=True) and Fine Tuned fc layer output is '3'(dolphin,shark,whale)
+> 
+> 3. Using CE Loss ( nn.CrossEntropyLoss() )
+> 
+> 4. Optimizer is 'Adam'
+
++ The Best Acc and Epoch (valid)
+> Acc : 90.87% ,  Epoch : 38 / 50
+
+### Acc & Loss Ploting (epoch : 1~50)
+![image](https://user-images.githubusercontent.com/104747868/222973434-7010b3e4-2046-402a-82ab-8af2b3ce8a55.png)
+
+### Ploting Prediction for Random Image
+![image](https://user-images.githubusercontent.com/104747868/222973547-db96579b-77d9-4fb7-9a42-0db2b9e3a42e.png)
++ **0 : dolphin, 1 : shark, 2 : whale**
+> Among the learned weights, I take the weights of the best accuracy epoch, bring the model back up, and visualize making predictions for random photograph.
+
+> If you look at the picture on the rightmost side of the above picture, you can see that the model learned the picture where the answer is a **dolphin** and incorrectly predicted it as a **"whale"**.
+
+
+> Plotting just below the image is the probability that the model predicts for each label. As you can see in the picture, you can see that they are similar.
