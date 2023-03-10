@@ -1,7 +1,7 @@
 # Data Network Analysis(DNA)
 Computer Vision
 
-> 2022.01.19 ~ ing
+> 2023.01.19 ~ 2023.03.09
 
 > I am active as a member of the club of the undergraduate major of the Department of Data Science at the Suwon University.   
    
@@ -165,7 +165,7 @@ It took 1312 pictures of dolphins, sharks, and whales, created a class according
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## Week 6 - ResNet50 Image Classification (val_acc : **90.87%**)
+## Week 6 - ResNet50 Image Classification 1 
 
 [Pytorch Code](https://github.com/WestChaeVI/Data-Network-Analysis/blob/main/Task/CV_seminar_project_week_6_%EA%B3%BC%EC%A0%9C.ipynb)
 
@@ -179,9 +179,9 @@ It took 1312 pictures of dolphins, sharks, and whales, created a class according
 > 4. Optimizer is 'Adam'
 
 + The Best Acc and Epoch (valid)
-> Acc : 90.87% ,  Epoch : 38 / 50
+> Acc : **90.87%** ,  Epoch : **38 / 50**
 
-### Acc & Loss Ploting (epoch : 1~50)
+### Acc & Loss Ploting (epochs : 1~50)
 ![image](https://user-images.githubusercontent.com/104747868/222973434-7010b3e4-2046-402a-82ab-8af2b3ce8a55.png)
 
 ### Ploting Prediction for Random Image
@@ -193,3 +193,28 @@ It took 1312 pictures of dolphins, sharks, and whales, created a class according
 
 
 > Plotting just below the image is the probability that the model predicts for each label. As you can see in the picture, you can see that they are similar.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Week 7 - ResNet50 Image Classification 2 
+
+The learning weight when it was the best epoch was taken and applied to the test set to conduct model evaluation.
+
+[Pytorch Code](https://github.com/WestChaeVI/Data-Network-Analysis/blob/main/Task/CV_seminar_project_week_7(testing).ipynb)
+
++ ResNet50 train 100 epochs
+> The Best Acc and Epoch (valid)   
+> Acc : **91.93%** ,  Epoch : **56 / 100**   
+
+The model weights for epoch 56 were stored, and the stored weights were applied when the model was re-declared.   
+
++ testset evaluate (epochs : 30)
+> The Best Acc and Epoch (test)   
+> Acc : **90.77%** ,  Epoch : **15 / 30**
+
+
+### Acc & Loss Ploting (epoch : 1~30)
+![image](https://user-images.githubusercontent.com/104747868/224246210-02a7319e-95d1-4912-887d-6bebbbf89684.png)
+
++ Conclusion
+> At the 15th epoch, 90.769% was achieved based on the test set.
