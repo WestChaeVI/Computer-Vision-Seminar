@@ -1,11 +1,10 @@
 from torch.utils.data import Dataset, DataLoader
-import cv2
 import os
+import cv2
+import glob
 import torch
 import torchvision
 from torchvision import transforms # 이미지 데이터 augmentation
-import os
-import glob
 
 
 class Custom_dataset(Dataset):
