@@ -18,38 +18,38 @@ class Make_dataset_dir():
     shark_img_list = glob.glob('/content/drive/MyDrive/CV_seminar_project/original/shark/*')
     whale_img_list = glob.glob('/content/drive/MyDrive/CV_seminar_project/original/whale/*')
     
-    dic = {'dolphin':dolphin_img_list, 'shark': shark_img_list, 'whale': whale_img_list} # µñ¼Å³Ê¸® »ı¼º
+    dic = {'dolphin':dolphin_img_list, 'shark': shark_img_list, 'whale': whale_img_list} # ë”•ì…”ë„ˆë¦¬ ìƒì„±
     for key in dic.keys():
-    print(f'{key} ÀÌ¹ÌÁö°¡ ', len(dic[key]), '°³ ÀÖ½À´Ï´Ù.')
+    print(f'{key} ì´ë¯¸ì§€ê°€ ', len(dic[key]), 'ê°œ ìˆìŠµë‹ˆë‹¤.')
   print('------------------------------------------------------------------------------')
 
     length_list = []
     for key in dic.keys():
-      print(f'{key} ÀÌ¹ÌÁö´Â train, valid, test¼Â¿¡ ´ëÇØ ', int(len(dic[key])*0.7), int(len(dic[key])*0.2), int(len(dic[key])*0.1)    
+      print(f'{key} ì´ë¯¸ì§€ëŠ” train, valid, testì…‹ì— ëŒ€í•´ ', int(len(dic[key])*0.7), int(len(dic[key])*0.2), int(len(dic[key])*0.1)    
 
   # Make Directory
   def mk_dir(self):
-    '''train, valid, test Æú´õ¸¦ ¸¸µé°í, ³»ºÎ¿¡´Â Å¬·¡½º º° Æú´õ¸¦ Ãß°¡·Î ¸¸µé¾î ÁÖ¼¼¿ä.'''
+    '''train, valid, test í´ë”ë¥¼ ë§Œë“¤ê³ , ë‚´ë¶€ì—ëŠ” í´ë˜ìŠ¤ ë³„ í´ë”ë¥¼ ì¶”ê°€ë¡œ ë§Œë“¤ì–´ ì£¼ì„¸ìš”.'''
     '''Create train, valid, test folders, and create additional folders for each class inside.'''
 
     dataset_dir_list = [self.trainset_path, self.validset_path, self.testset_path]
     for dataset_dir in dataset_dir_list:
       for cls in self.class_list:
         os.makedirs(dataset_dir+cls, exist_ok=True)
-    print('µğ·ºÅä¸® »ı¼ºÀ» ¿Ï·áÇÏ¿´½À´Ï´Ù.')
+    print('ë””ë ‰í† ë¦¬ ìƒì„±ì„ ì™„ë£Œí•˜ì˜€ìŠµë‹ˆë‹¤.')
     
   def move_img(self):
-    '''mk_dir¿¡¼­ ¸¸µç Æú´õµé¿¡ °¢ Å¬·¡½º¿¡ ¸Â´Â ÀÌ¹ÌÁö¸¦ ¹è´çÇØÁÖ¼¼¿ä. train, valid, test¿¡ °¢°¢ 7: 2: 1'''
+    '''mk_dirì—ì„œ ë§Œë“  í´ë”ë“¤ì— ê° í´ë˜ìŠ¤ì— ë§ëŠ” ì´ë¯¸ì§€ë¥¼ ë°°ë‹¹í•´ì£¼ì„¸ìš”. train, valid, testì— ê°ê° 7: 2: 1'''
     '''Allocate images for each class to the folders created in mk_dir. 7: 2: 1 for train, valid, and test respectively'''
 
     dolphin_img_list = glob.glob('/content/drive/MyDrive/CV_seminar_project/original/dolphin/*')
     shark_img_list = glob.glob('/content/drive/MyDrive/CV_seminar_project/original/shark/*')
     whale_img_list = glob.glob('/content/drive/MyDrive/CV_seminar_project/original/whale/*')
     
-    dic = {'dolphin':dolphin_img_list, 'shark': shark_img_list, 'whale': whale_img_list} # µñ¼Å³Ê¸® »ı¼º
+    dic = {'dolphin':dolphin_img_list, 'shark': shark_img_list, 'whale': whale_img_list} # ë”•ì…”ë„ˆë¦¬ ìƒì„±
     length_list = []
     for key in dic.keys():
-      length_list.append([int(len(dic[key])*0.7), int(len(dic[key])*0.2), int(len(dic[key])*0.1)]) # Å¬·¡½º º° ºĞÇÒ °³¼ö ¸®½ºÆ® »ı¼º
+      length_list.append([int(len(dic[key])*0.7), int(len(dic[key])*0.2), int(len(dic[key])*0.1)]) # í´ë˜ìŠ¤ ë³„ ë¶„í•  ê°œìˆ˜ ë¦¬ìŠ¤íŠ¸ ìƒì„±
 
     for i,key in enumerate(dic.keys()):  # Use enumerate function
       spliting_length = length_list[i]
@@ -69,13 +69,13 @@ class Make_dataset_dir():
           img = cv2.imread(img_path)
           img_name = img_path.split('/')[-1]
           cv2.imwrite(self.testset_path + '/' + key + '/' + img_name, img)
-    print('µ¥ÀÌÅÍ ½ºÇÃ¸´ÀÌ ÀüºÎ ¿Ï·áµÇ¾ú½À´Ï´Ù.') # All data splits are complete.
+    print('ë°ì´í„° ìŠ¤í”Œë¦¿ì´ ì „ë¶€ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.') # All data splits are complete.
 
   def run(self):  # Using time library to print total time spent
     start = time.time()
     self.mk_dir()
     self.move_img()
-    print('ÃÑ ¼Ò¿ä½Ã°£: ', time.time()-start)
+    print('ì´ ì†Œìš”ì‹œê°„: ', time.time()-start)
 
   def checking_dirs(self):
     path_list = [self.trainset_path, self.validset_path, self.testset_path]
@@ -87,13 +87,13 @@ class Make_dataset_dir():
 
       if i==0:
         for key in length_dic:
-          print( f'trainsetÀÇ {key}Å¬·¡½º °³¼ö: {length_dic[key]}')
+          print( f'trainsetì˜ {key}í´ë˜ìŠ¤ ê°œìˆ˜: {length_dic[key]}')
         print('---------------------------------------------------------------')
       elif i==1:
         for key in length_dic:
-          print( f'validsetÀÇ {key}Å¬·¡½º °³¼ö: {length_dic[key]}')
+          print( f'validsetì˜ {key}í´ë˜ìŠ¤ ê°œìˆ˜: {length_dic[key]}')
         print('---------------------------------------------------------------')
       else:
         for key in length_dic:
-          print( f'validsetÀÇ {key}Å¬·¡½º °³¼ö: {length_dic[key]}')
+          print( f'validsetì˜ {key}í´ë˜ìŠ¤ ê°œìˆ˜: {length_dic[key]}')
      
