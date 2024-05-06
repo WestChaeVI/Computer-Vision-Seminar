@@ -2,8 +2,6 @@
 Computer Vision
 
 > 2023.01.19 ~ 2023.03.09
-
-> I am active as a member of the club of the undergraduate major of the Department of Data Science at the Suwon University.   
    
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Week 1 - Neural Network
